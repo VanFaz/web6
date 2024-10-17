@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор услуги</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор стоимости услуги</h1>
+        <form id="serviceForm">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Введите количество" required>
+
+            <h3>Выберите тип услуги:</h3>
+            <label>
+                <input type="radio" name="serviceType" value="type1" checked> Кола б/с (109 руб)
+            </label>
+            <label>
+                <input type="radio" name="serviceType" value="type2"> Пицца пепперони (519 руб)
+            </label>
+            <label>
+                <input type="radio" name="serviceType" value="type3"> Комбо набор Пицца+Кола (629 руб)
+            </label>
+
+            <div id="options" style="display: none;">
+                <label for="optionSelect">Выберите опцию:</label>
+                <select id="optionSelect">
+                    <option value="80">Двойное пепперони (80 руб)</option>
+                    <option value="110">Мега сырная (+110 руб)</option>
+                    <option value="99">Закрытая пицца (+99 руб)</option>
+                </select>
+            </div>
+
+            <div id="property" style="display: none;">
+                <label>
+                    <input type="checkbox" id="propertyCheckbox"> Оставить чаевые (+100 руб)
+                </label>
+            </div>
+        </form>
+
+        <div id="result">Итоговая стоимость: 0 руб.</div>
+    </div>
+</body>
+</html>
